@@ -10,9 +10,11 @@
     <div id="logo">
         <img id="logo-img" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png">
     </div>
-    <div id="searchbar">
+    <form action="#">
+    <div id="search-holder">
         <input id="searchbox" type="text">
     </div>
+    </form>
     <div id="buttons">
         <button>Google Search</button>
         <button>I'm Feeling Lucky</button>
@@ -31,6 +33,13 @@
 </main>
 
 <style>
+    body, a, p {
+        font-family: arial, sans-serif;
+    }
+
+    #navbar, #footer {
+        font-size:12px; 
+    }
     #navbar {
         height: 50px;
 
@@ -49,13 +58,37 @@
         margin-right: auto;
     }
 
+#search-holder {
+    background: #fff;
+    display: flex;
+    border: 1px solid #dfe1e5;
+    box-shadow: none;
+    border-radius: 24px;
+    z-index: 3;
+    height: 44px;
+    margin: 0 auto;
+    width: 482px;
+
+}
+
+#search-holder:hover {
+    box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);
+    border-color: rgba(223,225,229,0);
+}
     #searchbox {
-        display: block;
-        border-radius: 15%;
-        margin-left: auto;
-        margin-right: auto;
-        width: 400px;
-        height: 35px;
+        background-color: transparent;
+        display: flex;
+        
+        border: none;
+        margin: 0;
+        padding: 0;
+        color: rgba(0,0,0,.87);
+        height: 100%;
+        width: 100%;
+        font-size: 16px;
+        margin-left: 20px;
+        margin-right: 20px;
+       
 
     }
 
@@ -72,7 +105,7 @@
 
     li a {
         display: block;
-        color: black;
+        color: #5f6368;
         text-align: center;
         padding: 14px 16px;
         text-decoration: none;
@@ -81,6 +114,14 @@
     #buttons {
         text-align: center;
         padding-top: 20px;
+        
+    }
+    button {
+        color: #5f6368;
+        border: none;
+        height: 38px;
+        border-radius: 5%;
+        background-color: #f2f2f2;
     }
 
     #footer {
@@ -88,7 +129,10 @@
         bottom: 0;
         width: 100%;
         height: 2rem;
-        background-color: silver;
+        background: #f2f2f2;
         padding-bottom: 10px;
+        
     }
+
+    input:focus {outline:none;}
 </style>
